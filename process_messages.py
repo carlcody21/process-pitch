@@ -87,15 +87,17 @@ class Book:
             else:
                 # log's info message to process_pitch_data.log
                 logging.info('MESSAGE TYPE IGNORED')
-                
-# create instance of Book object
-book = Book()
 
-# read input from file passed to stdin
-for line in fileinput.input():
-    # for each line process message
-    book.process_message(line)
+# set to run as script      
+if __name__ == "__main__":
+    # create instance of Book object
+    book = Book()
 
-# call book sort method to return sorted array of symbols, for each symbol print symbol and number of trades or executes ran against it
-for symbol in book.sort_count():
-    print('{} \t {}'.format(symbol, book.count[symbol]))
+    # read input from file passed to stdin
+    for line in fileinput.input():
+        # for each line process message
+        book.process_message(line)
+
+    # call book sort method to return sorted array of symbols, for each symbol print symbol and number of trades or executes ran against it
+    for symbol in book.sort_count():
+        print('{} \t {}'.format(symbol, book.count[symbol]))
