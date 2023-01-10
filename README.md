@@ -1,8 +1,8 @@
 # Process Pitch Messages
 
-Simple script written to process pitch messages of type 'A', 'E', 'P', and 'X'. 
+### Simple script written to process pitch messages of type 'A', 'E', 'P', and 'X'. 
 
-The script can be run by following the below outline. Pitch messages are read in to stdin by passing a file of messages when running the script.
+After cloning the repo the script can be run by following the below outline. Pitch messages are read in to stdin by passing a file of messages when running the script.
 
 `python process_messages.py <file of pitch messages>`
 
